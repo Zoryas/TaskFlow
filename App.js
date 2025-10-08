@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; // React Router
-import "./App.css"; // Import the App.css for styling
-import TaskListView from "./TaskListView"; // Import the TaskListView component
-import AddTaskView from "./AddTaskView"; // Import the AddTaskView component
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.css"; 
+import TaskListView from "./TaskListView"; 
+import AddTaskView from "./AddTaskView"; 
 
 function App() {
-  const [tasks, setTasks] = useState([]); // Initialize tasks state
+  const [tasks, setTasks] = useState([]); 
 
-  // Function to add a new task
+ 
   const addTask = (taskDetails) => {
     setTasks((prevTasks) => [...prevTasks, taskDetails]);
   };
 
-  // Function to delete a task
+  
   const deleteTask = (taskId) => {
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
   };
@@ -51,3 +51,4 @@ function App() {
 }
 
 export default App;
+
