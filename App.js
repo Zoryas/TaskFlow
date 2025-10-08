@@ -1,20 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; 
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css"; 
 
-function Home() {
+function TaskListView() {
   return (
-    <div className='home'>
-      <h1>Task Flow</h1>
-      <p>Task Management Application</p>
+    <div className='task-list-view'>
+      <h1>Task List</h1>
+      <p>Here you can see all the tasks you have to manage.</p>
+      {/* Here, you would list the tasks in the future */}
     </div>
   );
 }
 
-function AddTask() {
+function AddTaskView() {
   return (
-    <div className='addtask'>
-      <h1>This is a Task Management Application where you can add task.</h1>
+    <div className='add-task-view'>
+      <h1>Add New Task</h1>
+      <p>This is where you can add a new task to your list.</p>
+      {/* Future form for adding tasks would go here */}
     </div>
   );
 }
@@ -42,12 +45,10 @@ function App() {
 
         {/* Define the routes */}
         <Routes>
-          <Route path='/home' element={<Home />} />
-          <Route path='/addtask' element={<AddTask />} />
+          <Route path='/home' element={<TaskListView />} />
+          <Route path='/addtask' element={<AddTaskView />} />
         </Routes>
       </Router>
-
-      {/* Optionally Include the FunctionalComponent */}
     </div>
   );
 }
